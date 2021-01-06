@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+/*****CSS RESET*****/
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+/*TYPOGRAGHY FIX*/
+html {
+  font-size: 1px;
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+/*****COLORS*****/
+:root {
+  --darkCyan: hsl(185, 75%, 39%);
+  --darkBlue: #2d3248;
+  --grayishBlue: hsl(227, 10%, 46%);
+  --darkGray: #969696;
+}
+
+/*****STYLES*****/
+.pcards {
+  background-color: var(--darkCyan);
+  background-image: url(../images/bg-pattern-top.svg);
+  background-position-x: -20vw;
+  background-position-y: -600rem;
+  background-repeat: no-repeat;
+}
+
+.pcards .pcard {
+  background: #ffffff url(../images/bg-pattern-card.svg) no-repeat top;
+  border-radius: 20rem;
+  -webkit-box-shadow: 0px 20px 30px 5px rgba(45, 50, 72, 0.2);
+          box-shadow: 0px 20px 30px 5px rgba(45, 50, 72, 0.2);
+}
+
+.pcards .pcard img {
+  border: #ffffff solid 5rem;
+  border-radius: 50%;
+  background-color: #ffffff;
+}
+
+.pcards .pcard h2,
+.pcards .pcard strong {
+  font-size: 18rem;
+}
+
+.pcards .pcard strong {
+  color: var(--darkBlue);
+}
+
+.pcards .pcard h2 {
+  font-weight: 400;
+  color: var(--grayishBlue);
+}
+
+.pcards .pcard h3 {
+  font-size: 14rem;
+  font-weight: 400;
+  color: var(--grayishBlue);
+}
+
+.pcards .pcard p {
+  font-size: 10rem;
+  letter-spacing: 1rem;
+  color: var(--grayishBlue);
+}
+
+.pcards .pcard .stats {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/*****LAYOUT*****/
+.pcards {
+  width: 100vw;
+  height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.pcards .pcard {
+  width: 320rem;
+  height: 370rem;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  -ms-grid-rows: (70rem)[4] 90rem;
+      grid-template-rows: repeat(4, 70rem) 90rem;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+}
+
+.pcards .pcard .profilepic {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 2;
+  grid-row: 2 / 4;
+}
+
+.pcards .pcard .name {
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 1;
+  grid-row: 4 / 5;
+  height: 70rem;
+  text-align: center;
+}
+
+.pcards .pcard .name h2 {
+  margin-bottom: 14rem;
+}
+
+.pcards .pcard .stats {
+  -ms-grid-row: 5;
+  -ms-grid-row-span: 1;
+  grid-row: 5 / 6;
+  width: 100%;
+  height: 90rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.pcards .pcard .stats div {
+  height: 35rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+/*# sourceMappingURL=main.css.map */

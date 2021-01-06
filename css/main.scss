@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+/*****CSS RESET*****/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+/*TYPOGRAGHY FIX*/
+html {
+    font-size: 1px;
+    font-family: "Kumbh Sans", sans-serif;
+}
+
+/*****COLORS*****/
+:root {
+    --darkCyan: hsl(185, 75%, 39%);
+    --darkBlue: #2d3248;
+    --grayishBlue: hsl(227, 10%, 46%);
+    --darkGray: #969696;
+}
+
+/*****STYLES*****/
+.pcards {
+    background-color: var(--darkCyan);
+    background-image: url(../images/bg-pattern-top.svg);
+    background-position-x: -20vw;
+    background-position-y: -600rem;
+    background-repeat: no-repeat;
+
+    .pcard {
+        background: #ffffff url(../images/bg-pattern-card.svg) no-repeat top;
+        border-radius: 20rem;
+        box-shadow: 0px 20px 30px 5px rgba(45, 50, 72, 0.2);
+
+        img {
+            border: #ffffff solid 5rem;
+            border-radius: 50%;
+            background-color: #ffffff;
+        }
+
+        h2,
+        strong {
+            font-size: 18rem;
+        }
+        strong {
+            color: var(--darkBlue);
+        }
+        h2 {
+            font-weight: 400;
+            color: var(--grayishBlue);
+        }
+        h3 {
+            font-size: 14rem;
+            font-weight: 400;
+            color: var(--grayishBlue);
+        }
+        p {
+            font-size: 10rem;
+            letter-spacing: 1rem;
+            color: var(--grayishBlue);
+        }
+
+        .stats {
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
+        }
+    }
+}
+
+/*****LAYOUT*****/
+.pcards {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+
+    .pcard {
+        width: 320rem;
+        height: 370rem;
+
+        display: grid;
+        place-items: center;
+        grid-template-rows: repeat(4, 70rem) 90rem;
+        grid-template-columns: 1fr;
+
+        .profilepic {
+            grid-row: 2 / 4;
+        }
+        .name {
+            grid-row: 4 / 5;
+            height: 70rem;
+
+            text-align: center;
+
+            h2 {
+                margin-bottom: 14rem;
+            }
+        }
+        .stats {
+            grid-row: 5 / 6;
+            width: 100%;
+            height: 90rem;
+
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+
+            div {
+                height: 35rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+            }
+        }
+    }
+}
